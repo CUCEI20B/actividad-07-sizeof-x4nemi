@@ -2,25 +2,17 @@
 
 using namespace std;
 
-int tam(string dato);
-
 int main() {
-    string tipoDato;
+    string dato;
 
-    cin >> tipoDato;
+    cin >> dato;
 
-    cout << tam(tipoDato);
+    if(dato == "int") cout << sizeof(int);
+    if(dato == "float") cout << sizeof(float);
+    if(dato == "char") cout << sizeof(char);
+    if(dato == "short") cout << sizeof(short);
+    if(dato == "double") cout << sizeof(double);
+    if(dato == "long") cout << sizeof(long);
 
     return 0;
-}
-
-//char, int, short, float, double, long
-
-int tam(string dato){
-    if(dato == "int") return sizeof(int);
-    if(dato == "float") return sizeof(float);
-    if(dato == "char") return sizeof(char);
-    if(dato == "short") return sizeof(short);
-    if(dato == "double") return sizeof(double);
-    if(dato == "long") return sizeof(long);
 }

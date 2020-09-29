@@ -2,8 +2,27 @@
 
 using namespace std;
 
+int tam(string dato);
+
 int main() {
-    cout << "Hola Mundo!" << endl; // eliminar esta línea
+    string tipoDato;
+
+    cin >> tipoDato;
+
+    if(tam(tipoDato) == -1) cout << "Tipo de dato incorrecto";
+    else cout << tam(tipoDato);
 
     return 0;
+}
+
+//char, int, short, float, double, long
+
+int tam(string dato){
+    if(dato == "int") return sizeof(int);
+    if(dato == "float") return sizeof(float);
+    if(dato == "char") return sizeof(char);
+    if(dato == "short") return sizeof(short);
+    if(dato == "double") return sizeof(double);
+    if(dato == "long") return sizeof(long);
+    else return -1;
 }

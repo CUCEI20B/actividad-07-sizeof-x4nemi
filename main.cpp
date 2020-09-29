@@ -9,8 +9,7 @@ int main() {
 
     cin >> tipoDato;
 
-    if(tam(tipoDato) == -1) cout << "Tipo de dato incorrecto";
-    else cout << tam(tipoDato);
+    cout << tam(tipoDato);
 
     return 0;
 }
@@ -24,5 +23,4 @@ int tam(string dato){
     if(dato == "short") return sizeof(short);
     if(dato == "double") return sizeof(double);
     if(dato == "long") return sizeof(long);
-    else return -1;
 }
